@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&58yz!04i_-#2*8=fn3xgd9n5j@dptg6_jtc&$r-1_&kv)8@kx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vercel.app' , 'esma-django-to-do-app.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'to_do_app_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/tmp/db.sqlite3',  # Important for Vercel
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -116,5 +116,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
-CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app', 'https://esma-django-to-do-app.vercel.app']
